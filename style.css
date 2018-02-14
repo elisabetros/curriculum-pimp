@@ -1,88 +1,101 @@
-#frontpage{
-    height:100vh;
-    background-color: azure;
-}
-li{
-    list-style-type: none;
-    display: inline-block;
-}
-a{
- text-decoration: none;
-    color:black;
-    margin: 1em;
-}
-a:hover{
-
-}
-nav{
-    text-align: center;
-
+#frontpage {
+  height: 100vh;
+  background-color: azure;
 }
 
-#coreAreas{
-   background-color: rebeccapurple;
-    display: relative;
-    text-align: center;
-     display: grid;
-    grid-template-columns: 1fr 1fr;
-     justify-items: center;
-}
-p, h1{
-    padding:1%;
-    text-align: center;
-    grid-column: 1/-1;
-}
-p{
-    margin-top: 0;
-}
-.coreimg{
-    border: 1px solid black;
-    width: 100px;
-    height:100px;
-    margin: 5%
+li {
+  list-style-type: none;
+  display: inline-block;
 }
 
-.wrapper{
-    position: relative;
-    margin:3%;
-}
-.semester{
-    border:1px solid black;
-}
-.hide{
-    display: none;
-}
-.details{
-    position: absolute;
-    height:100%;
-    width:75%;
-    right: 0;
-    top: 0;
-    background-color: aqua;
-}
-.expand{
-    font-size: 2em;
-    margin: 0;
-    cursor: pointer;
-}
-.x{
-    cursor: pointer;
-    font-size: 2em;
-    text-align: right;
+a {
+  text-decoration: none;
+  color: black;
+  margin: 1em;
 }
 
-#exams{
-   background-color: bisque;
-}
-#additional{
-    background-color: brown;
+a:hover {
+  cursor: pointer;
 }
 
-@media screen and (min-width: 700px){
-    .wrapper{
-        margin:10%;
-    }
-    #coreAreas{
-       grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+nav {
+  text-align: center;
+}
+
+#coreAreas {
+  background-color: rebeccapurple;
+  display: relative;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+p,
+h1 {
+  padding: 1%;
+  text-align: center;
+  grid-column: 1/-1;
+}
+
+p {
+  margin-top: 0;
+}
+
+.coreimg {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  margin: 5%
+}
+
+.wrapper {
+  position: relative;
+  margin: 3%;
+}
+
+.semester {
+  border: 1px solid black;
+}
+
+.hide {
+  display: none;
+}
+
+.details {
+  position: absolute;
+  height: 100%;
+  width: 75%;
+  right: 0;
+  top: 0;
+  background-color: aqua;
+}
+
+.expand {
+  font-size: 2em;
+  margin: 0;
+  cursor: pointer;
+}
+
+.x {
+  cursor: pointer;
+  font-size: 2em;
+  text-align: right;
+}
+
+#exams {
+  background-color: bisque;
+}
+
+#additional {
+  background-color: brown;
+}
+
+@media screen and (min-width: 700px) {
+  .wrapper {
+    margin: 10%;
+  }
+  #coreAreas {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
