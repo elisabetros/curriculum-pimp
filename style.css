@@ -88,14 +88,31 @@ p {
 }
 
 #additional {
-  background-color: brown;
+    background-color: brown;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3%;
 }
-
+section {
+    padding: 2em;
+    height: 1em;
+    overflow: hidden;
+}
+section.unfold {
+    height: auto;
+}
+sub {
+    cursor: pointer;
+}
 @media screen and (min-width: 700px) {
-  .wrapper {
-    margin: 10%;
-  }
-  #coreAreas {
+    .wrapper {
+        margin: 10%;
+    }
+    #coreAreas {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+    }
+    #additional {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
