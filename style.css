@@ -32,7 +32,7 @@ nav {
 }
 
 p,
-h1, h2 {
+h1 {
   padding: 1%;
   text-align: center;
   grid-column: 1/-1;
