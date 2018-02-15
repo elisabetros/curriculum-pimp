@@ -1,0 +1,54 @@
+[
+    {
+        "semester": 1,
+        "components": [
+            {
+                "name": "Multimedia production 1",
+                "ects": 30,
+                "inhold": [{},{},{},{}]
+            }
+        ]
+    },
+    {
+        "semester": 2,
+        "components": [
+            {
+                "name": "Multimedia production 2",
+                "ects": 30,
+                "inhold": [{},{},{},{}]
+            }
+        ]
+    },
+    {
+        "semester": 3,
+        "components": [
+            {
+                "name": "Multimedia production 3",
+                "ects": 20,
+                "inhold": [{},{},{},{}]
+            },
+            {
+                "name": "Electives",
+                "ects": 20,
+                "inhold": [{},{},{},{}]
+
+            }
+        ]
+    },
+    {
+        "semester": 4,
+        "components": [
+            {
+                "name": "Internship",
+                "ects": 15,
+                "inhold": [{},{},{},{}]
+            },
+            {
+                "name": "Final Project",
+                "ects": 15,
+                "inhold": [{},{},{},{}]
+
+            }
+        ]
+    }
+]

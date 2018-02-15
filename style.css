@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+}
 #frontpage {
   height: 100vh;
   background-color: azure;
@@ -57,7 +65,16 @@ p {
 .semester {
   border: 1px solid black;
 }
-
+.blocks {
+    padding: 15px;
+    height: auto;
+    display: grid;
+    grid-gap: 15px;
+}
+.block {
+    background-color: darkorange;
+    height: 90px;
+}
 .hide {
   display: none;
 }
