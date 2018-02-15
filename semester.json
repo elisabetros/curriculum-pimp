@@ -1,0 +1,64 @@
+[
+{
+    "semester": 1,
+//    "core-areas": ["B", "DV", "ID", "CP"],
+    "B": ["ori","desc","examples"],
+    "DV": ["ori","desc","examples"],
+    "ID": ["ori","desc","examples"],
+    "CP": ["ori","desc","examples"],
+    "abroad-possible": false,
+    "program": ["Multimedia production 1"],
+    "ects": [30]
+},
+
+{
+    "semester": 2,
+    "B": ["ori","desc","examples"],
+    "DV": ["ori","desc","examples"],
+    "ID": ["ori","desc","examples"],
+    "CP": ["ori","desc","examples"],
+    "abroad-possible": false,
+    "program": ["Multimedia production 2"],
+    "ects": [30]
+},
+{
+    "semester": 3,
+    "B": ["ori","desc","examples"],
+    "DV": ["ori","desc","examples"],
+    "ID": ["ori","desc","examples"],
+    "CP": ["ori","desc","examples"],
+    "abroad-possible": true,
+    "program": ["Multimedia production 3", "elective"],
+    "ects": [20, 10],
+},
+{
+    "semester": 4,
+    "B": ["ori","desc","examples"],
+    "DV": ["ori","desc","examples"],
+    "ID": ["ori","desc","examples"],
+    "CP": ["ori","desc","examples"],
+    "abroad-possible": true,
+    "program": ["internship", "final project"],
+    "ects": [15, 15],
+}
+]
+
+
+
+
+
+
+
+/*
+
+[
+    {
+       "name": "B",
+        "skills":["s1","s2","s3","s4"],  //seperated by semester
+        "compet":
+    },
+    {},
+    {},
+]
+
+*/
