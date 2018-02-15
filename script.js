@@ -63,7 +63,7 @@ function generateForEachSemester(semesters){
         allEctsS.push(allEcts);
     }
     /* in case some semester has more ECTS than others */
-    let longestBar = Math.max(...allEctsS); // the ... is because allEctsS is an array, can't use Math.max directly. can also use Math.max.apply()
+    let longestBar = Math.max(...allEctsS); // the ... is because allEctsS is an array, can't use Math.max directly. can also use Math.max.apply(null, array)
     for(i=0; i<semesters.length; i++){
         document.querySelector('.semester:nth-of-type('+ (i+1) + ') .blocks').style.width = allEctsS[i]/longestBar*100 +"%";
     }
