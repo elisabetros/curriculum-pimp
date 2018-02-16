@@ -1,14 +1,30 @@
+/*
+to do:
++blocks width needs refine, now doesn't display properly when ects is much bigger
+
+
+maybe:
+?
+
+issues:
+!
+
+*/
+
 let expand = document.querySelectorAll(".expand");
 let close = document.querySelectorAll(".x");
 let arrow = document.querySelectorAll('sub'); // need to change later
 
 // expand details for each semester
 expand.forEach(showDetail)
-function showDetail(e){
+function showDetail(e, index){
+    // click on each expand, opens the corresponding detail section
     e.addEventListener("click", displayIndivdual);
     function displayIndivdual(){
-     e.parentElement.nextElementSibling.classList.remove("hide");
+        e.parentElement.nextElementSibling.classList.remove("hide");
     }
+    // flash expand icons in an order
+    e.style.animation = "flash 2s " + (index * 1) + "s infinite";
 }
 // close details for each semester /* need change later */
 close.forEach(hideDetails);
