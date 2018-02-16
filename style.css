@@ -92,6 +92,16 @@ p {
   font-size: 2em;
   margin: 0;
   cursor: pointer;
+    animation: flash 2s infinite;
+}
+
+@keyframes flash {
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .x {
