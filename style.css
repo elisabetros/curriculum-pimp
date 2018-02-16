@@ -63,12 +63,13 @@ p {
 }
 
 .details {
-  position: absolute;
-  height: 100%;
-  width: 75%;
-  right: 0;
-  top: 0;
-  background-color: aqua;
+    position: absolute;
+    height: 100%;
+    width: 75%;
+    right: 0;
+    top: 0;
+    background-color: aqua;
+    overflow: scroll;
 }
 
 .expand {
@@ -78,9 +79,9 @@ p {
 }
 
 .x {
-  cursor: pointer;
-  font-size: 2em;
-  text-align: right;
+    cursor: pointer;
+    font-size: 2em;
+    text-align: right;
 }
 
 #exams {
@@ -104,6 +105,11 @@ section.unfold {
 sub {
     cursor: pointer;
 }
+section.core-area {
+    height: auto;
+}
+
+
 @media screen and (min-width: 700px) {
     .wrapper {
         margin: 10%;
