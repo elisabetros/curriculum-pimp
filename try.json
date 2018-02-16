@@ -29,7 +29,7 @@
             },
             {
                 "name": "Electives",
-                "ects": 20,
+                "ects": 10,
                 "inhold": [{},{},{},{}]
 
             }
