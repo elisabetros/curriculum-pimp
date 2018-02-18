@@ -10,6 +10,26 @@ body {
   height: 100vh;
   background-color: azure;
 }
+svg{
+    width: 50%;
+     margin:auto;
+    display: block;
+}
+path{
+    fill:none;
+    stroke: black;
+    stroke-width: 1;
+    stroke-dasharray:1;
+    stroke-dashoffset: 1;
+}
+.draw{
+    animation: dash 100s linear forwards;
+}
+@keyframes dash{
+    to{
+        stroke-dashoffset:0;
+    }
+}
 
 li {
   list-style-type: none;
