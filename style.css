@@ -1,11 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-    position: relative;
+  position: relative;
 }
+
 #frontpage {
   height: 100vh;
   background-color: azure;
@@ -65,50 +67,53 @@ p {
 .semester {
   border: 1px solid black;
 }
+
 .blocks {
-    padding: 15px;
-    height: auto;
-    display: grid;
-    grid-gap: 15px;
+  padding: 15px;
+  height: auto;
+  display: grid;
+  grid-gap: 15px;
 }
+
 .block {
-    background-color: darkorange;
-    height: 90px;
+  background-color: darkorange;
+  height: 90px;
 }
+
 .hide {
   display: none;
 }
 
 .details {
-    position: absolute;
-    height: 100%;
-    width: 75%;
-    right: 0;
-    top: 0;
-    background-color: aqua;
-    overflow: scroll;
+  position: absolute;
+  height: 100%;
+  width: 75%;
+  right: 0;
+  top: 0;
+  background-color: aqua;
+  overflow: scroll;
 }
 
 .expand {
   font-size: 2em;
   margin: 0;
   cursor: pointer;
-    animation: flash 2s infinite;
+  animation: flash 2s infinite;
 }
 
 @keyframes flash {
-    30% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .x {
-    cursor: pointer;
-    font-size: 2em;
-    text-align: right;
+  cursor: pointer;
+  font-size: 2em;
+  text-align: right;
 }
 
 #exams {
@@ -116,36 +121,42 @@ p {
 }
 
 #additional {
-    background-color: brown;
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 3%;
-}
-section {
-    padding: 2em;
-    height: 1em;
-    overflow: hidden;
-}
-section.unfold {
-    height: auto;
-}
-sub {
-    cursor: pointer;
-}
-section.core-area {
-    height: auto;
+  background-color: brown;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 3%;
 }
 
+section {
+  padding: 2em;
+  height: 1em;
+  overflow: hidden;
+}
+
+section.unfold {
+  height: auto;
+}
+
+sub {
+  cursor: pointer;
+}
+
+section.core-area {
+  height: auto;
+}
 
 @media screen and (min-width: 700px) {
-    .wrapper {
-        margin: 10%;
-    }
-    #coreAreas {
+  .wrapper {
+    margin: 10%;
+  }
+  #coreAreas {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-    #additional {
-        grid-template-columns: 1fr 1fr;
-    }
-
+  }
+  #additional {
+    grid-template-columns: 1fr 1fr;
+  }
+  .topMenu {
+    /* position: fixed; */
+    /* top: 0; */
+  }
 }

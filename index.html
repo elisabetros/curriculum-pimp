@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
   <meta charset="utf-8">
@@ -21,11 +21,16 @@
   </div>
 
   <nav>
-    <ul>
-      <li><a href="#coreAreas">Core Areas</a></li>
-      <li><a href="#programStructure">Program Structure</a></li>
-      <li><a href="#exams">Exams</a></li>
-      <li><a href="#additional">Additional Information</a></li>
+    <ul class="topMenu">
+      <li><a onclick="webScroll(event, 'coreAreas')"
+          href="#">Core Areas</a></li>
+      <li><a onclick="webScroll(event, 'programStructure')"
+          href="#">Program Structure</a></li>
+      <li><a id="linkExams"
+          onclick="webScroll(event, 'exams')"
+          href="#">Exams</a></li>
+      <li><a onclick="webScroll(event, 'additional')"
+          href="#">Additional Information</a></li>
     </ul>
   </nav>
 
@@ -54,24 +59,29 @@
         <div class="hide details">
           <p class="x">x</p>
           <section class="core-area">
-              <h5>Design and Visualisation</h5>
-              <p>Summary = use key theories, tools and methods for design and development of simple digital user interfaces. Apply key design processes, including the documentation of design process. Apply basic compositional/layout and digital visual design principles in MMD. Understand media types and current digital exchange formats used in MMD.</p>
-              <p>Examples = gestalt laws, contrast (colour, typography), colour theory, typography. Moodboard, style tile, style guide. </p>
+            <h5>Design and Visualisation</h5>
+            <p>Summary = use key theories, tools and methods for design and development of simple digital user interfaces. Apply key design processes, including the documentation of design process. Apply basic compositional/layout and digital visual design
+              principles in MMD. Understand media types and current digital exchange formats used in MMD.</p>
+            <p>Examples = gestalt laws, contrast (colour, typography), colour theory, typography. Moodboard, style tile, style guide. </p>
           </section>
           <section class="core-area">
-              <h5>Interaction Development</h5>
-              <p>Summary = structure and use of the internet, with special emphasis on understanding client-server relationships and their impact on the dev. Of digital user interfaces. Relevant technologies, central methods for modelling, structuring and developing digital user interfaces. Use/manage key technologies and methods of version control?? for a MMD production. Develop simple user interfaces.</p>
-              <p>Examples = Basic HTML, Basic CSS, Basic Javascript</p>
+            <h5>Interaction Development</h5>
+            <p>Summary = structure and use of the internet, with special emphasis on understanding client-server relationships and their impact on the dev. Of digital user interfaces. Relevant technologies, central methods for modelling, structuring and
+              developing digital user interfaces. Use/manage key technologies and methods of version control?? for a MMD production. Develop simple user interfaces.</p>
+            <p>Examples = Basic HTML, Basic CSS, Basic Javascript</p>
           </section>
           <section class="core-area">
-              <h5>Communication and Presentation</h5>
-              <p>Summary = Understand different types of digital media, f.x. Websites, animations, videos, games, apps, etc. Central theory and central test methods for user understanding, digital content and multimedia production - user tests (tests executed on potential users of a product to find out if it works, if it’s relevant and needed, what can be improved, what isn’t relevant, etc. Individual testing, group testing, interviews, etc. Plan and conduct user testing and then produce content based on user understanding.</p>
-              <p>Examples = 5 second test, Think a loud, focus group, heuristic, expert review, peer review, interview, individual etc.</p>
+            <h5>Communication and Presentation</h5>
+            <p>Summary = Understand different types of digital media, f.x. Websites, animations, videos, games, apps, etc. Central theory and central test methods for user understanding, digital content and multimedia production - user tests (tests executed
+              on potential users of a product to find out if it works, if it’s relevant and needed, what can be improved, what isn’t relevant, etc. Individual testing, group testing, interviews, etc. Plan and conduct user testing and then produce content
+              based on user understanding.</p>
+            <p>Examples = 5 second test, Think a loud, focus group, heuristic, expert review, peer review, interview, individual etc.</p>
           </section>
           <section class="core-area">
-                 <h5>Business</h5>
-                  <p>Summary = use key theories, methods and tools for planning, developing and managing a simple multimedia production. Copyright and licensing methods in multimedia production (legal parameters). Companies strategy as a basis for multimedia production and the multimedia designer’s position in the value chain???</p>
-                  <p>Examples = Business Model Canvas, Communication Plan, Report (writing)</p>
+            <h5>Business</h5>
+            <p>Summary = use key theories, methods and tools for planning, developing and managing a simple multimedia production. Copyright and licensing methods in multimedia production (legal parameters). Companies strategy as a basis for multimedia production
+              and the multimedia designer’s position in the value chain???</p>
+            <p>Examples = Business Model Canvas, Communication Plan, Report (writing)</p>
           </section>
         </div>
       </div>
@@ -84,24 +94,31 @@
         <div class="hide details">
           <p class="x">x</p>
           <section class="core-area">
-              <h5>Design and Visualisation</h5>
-              <p>Summary = relevant theories, tools, methods and rules for the design and dev.. Of user-oriented design and user experiences. Methods for presenting data. Apply and combine media forms of expression for design and production of user experience in digital user interfaces. Apply methods and design processes, present solutions for the production and communication of digital user interfaces. Work with graphic materials, ensure consistent design and apply user-oriented approach in design process. Manage process documentation and communication in relation to stakeholders. Team work.</p>
-              <p>Examples =  </p>
+            <h5>Design and Visualisation</h5>
+            <p>Summary = relevant theories, tools, methods and rules for the design and dev.. Of user-oriented design and user experiences. Methods for presenting data. Apply and combine media forms of expression for design and production of user experience
+              in digital user interfaces. Apply methods and design processes, present solutions for the production and communication of digital user interfaces. Work with graphic materials, ensure consistent design and apply user-oriented approach in
+              design process. Manage process documentation and communication in relation to stakeholders. Team work.</p>
+            <p>Examples = </p>
           </section>
           <section class="core-area">
-              <h5>Interaction Development</h5>
-              <p>Summary = relevant technologies. Current and central programming paradigms for developing user interfaces. Data formats and exchange of limited data sets, synchronously and asynchronously with server. Apply key programming principles, including control structures?, fucntions, variable for the development of digital user interfaces. Apply key tech. For handling and displaying content in the production of digital user interfaces. Apply key blahbalh and data formats for exchange and presentation of complex data sets in digital user interfaces. Team-work. Handle process documentation and communication in relation to stakeholders, including planning and documentation of MMD productions as well as data exchange via digital user interfaces</p>
-              <p>Examples = </p>
+            <h5>Interaction Development</h5>
+            <p>Summary = relevant technologies. Current and central programming paradigms for developing user interfaces. Data formats and exchange of limited data sets, synchronously and asynchronously with server. Apply key programming principles, including
+              control structures?, fucntions, variable for the development of digital user interfaces. Apply key tech. For handling and displaying content in the production of digital user interfaces. Apply key blahbalh and data formats for exchange and
+              presentation of complex data sets in digital user interfaces. Team-work. Handle process documentation and communication in relation to stakeholders, including planning and documentation of MMD productions as well as data exchange via digital
+              user interfaces</p>
+            <p>Examples = </p>
           </section>
           <section class="core-area">
-              <h5>Communication and Presentation</h5>
-              <p>Summary = applying central theories, methods and tools to support digital user experiences, including test methods. Methods for user understanding and content production, including information architecture and digital media. participate in teams and contribute to the production of digital, user-oriented content and create user experiences in complex digital user interfaces.</p>
-              <p>Examples = </p>
+            <h5>Communication and Presentation</h5>
+            <p>Summary = applying central theories, methods and tools to support digital user experiences, including test methods. Methods for user understanding and content production, including information architecture and digital media. participate in
+              teams and contribute to the production of digital, user-oriented content and create user experiences in complex digital user interfaces.</p>
+            <p>Examples = </p>
           </section>
           <section class="core-area">
-                 <h5>Business</h5>
-                  <p>Summary = understand the company’s external environment, including stakeholders, resource base. Tools applied in practice and use of data for optimisation of MMD production. Methods and tools related to project management and estimation of MMD productions. Plan and evaluate project management and quality assurance in team-based MMD productions. Emphasis on team.</p>
-                  <p>Scrum, sprints? Kanban?</p>
+            <h5>Business</h5>
+            <p>Summary = understand the company’s external environment, including stakeholders, resource base. Tools applied in practice and use of data for optimisation of MMD production. Methods and tools related to project management and estimation of
+              MMD productions. Plan and evaluate project management and quality assurance in team-based MMD productions. Emphasis on team.</p>
+            <p>Scrum, sprints? Kanban?</p>
           </section>
         </div>
       </div>
@@ -114,27 +131,31 @@
         <div class="hide details">
           <p class="x">x</p>
           <section class="core-area">
-              <h5>Design and Visualisation</h5>
-              <p>Summary = current international trends in digital design, methods for presenting data??, apply central international development trends to design, develop, adjust and maintain advanced digital user interfaces. Stay relevant/current.</p>
-              <p>Examples =  </p>
+            <h5>Design and Visualisation</h5>
+            <p>Summary = current international trends in digital design, methods for presenting data??, apply central international development trends to design, develop, adjust and maintain advanced digital user interfaces. Stay relevant/current.</p>
+            <p>Examples = </p>
           </section>
           <section class="core-area">
-              <h5>Interaction Development</h5>
-              <p>Summary = evaluate, define, select and apply central and current libraries and frameworks for (innovative) developing advanced digital user interfaces. Data structures, data formats and exchange of complex data sets with server. Apply key technologies, methods and data formats to the exchange and presentation of complex data sets in digital user interfaces. Communicate process to stakeholders.</p>
-              <p>Examples = </p>
+            <h5>Interaction Development</h5>
+            <p>Summary = evaluate, define, select and apply central and current libraries and frameworks for (innovative) developing advanced digital user interfaces. Data structures, data formats and exchange of complex data sets with server. Apply key
+              technologies, methods and data formats to the exchange and presentation of complex data sets in digital user interfaces. Communicate process to stakeholders.</p>
+            <p>Examples = </p>
           </section>
           <section class="core-area">
-              <h5>Communication and Presentation</h5>
-              <p>Summary = apply central theory and methods for planning user interaction and communication in various media productions. Know international digital trends and use of digital media and technologies by different user groups - apply this to the planning and development of user experiences in advanced MMD productions. Assess, adjust and present solutions for innovative communication in advanced MMD productions. Communicate supoort of digital user experiences to stakeholders. Always stay current/relevant on new trends/methods and users application of technologies.</p>
-              <p>Examples = </p>
+            <h5>Communication and Presentation</h5>
+            <p>Summary = apply central theory and methods for planning user interaction and communication in various media productions. Know international digital trends and use of digital media and technologies by different user groups - apply this to the
+              planning and development of user experiences in advanced MMD productions. Assess, adjust and present solutions for innovative communication in advanced MMD productions. Communicate supoort of digital user experiences to stakeholders. Always
+              stay current/relevant on new trends/methods and users application of technologies.</p>
+            <p>Examples = </p>
           </section>
           <section class="core-area">
-                 <h5>Business</h5>
-                  <p>Summary = digital business models applied in practice? Budgeting of MMD productions. Assess and analyse data and present solutions as a basis for innovative development of MMD. assess, evaluate and communicate innovative methods in MMD production. Keep up to date, acquire new knowledge of business apsects that suppoer the development of advanced MMD production.</p>
-                  <p>Examples = </p>
+            <h5>Business</h5>
+            <p>Summary = digital business models applied in practice? Budgeting of MMD productions. Assess and analyse data and present solutions as a basis for innovative development of MMD. assess, evaluate and communicate innovative methods in MMD production.
+              Keep up to date, acquire new knowledge of business apsects that suppoer the development of advanced MMD production.</p>
+            <p>Examples = </p>
           </section>
           <section class="core-area elective">
-              <h5>Electives</h5>
+            <h5>Electives</h5>
           </section>
         </div>
       </div>
@@ -147,10 +168,10 @@
         <div class="hide details">
           <p class="x">x</p>
           <section class="core-area intern">
-              <h5>Internship</h5>
+            <h5>Internship</h5>
           </section>
           <section class="core-area final-project">
-              <h5>Final Project</h5>
+            <h5>Final Project</h5>
           </section>
         </div>
       </div>
@@ -180,75 +201,75 @@
   <div id="additional">
     <h1>Additional Information</h1>
     <section>
-        <h3>Admission<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>Full information about admission can be found here: <br>http://www.kea.dk/da/uddannelser/erhvervsakademiuddannelser/multimedia-design-and-communication/admission/</p>
+      <h3>Admission<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>Full information about admission can be found here: <br>http://www.kea.dk/da/uddannelser/erhvervsakademiuddannelser/multimedia-design-and-communication/admission/</p>
     </section>
     <section>
-        <h3>Attendance<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>There are no rules on mandatory attendance, but active enrolment rules and criteria apply.<br> Students must actively participate in study activities, compulsory projects and assignments, tests and exams in accordance with the conditions described
-      in this curriculum and in applicable acts and ministerial orders. KEA regularly evaluates student activity. <br> To be considered active, students must participate in <br> • project start-up meetings;<br> • compulsory meetings with their supervisor/lecturer;<br>      • project work, including submission of assignments on the learning platform for the Multimedia Design and Communication programme;<br> • project presentations and evaluations;<br> • tests and exams as described in this curriculum;<br> • a number
-      of compulsory assignments each semester. These assignments must be approved for students to be able to register for exams in the semester in question.<br> Students who are unable to participate in study activities due to documented illness or for
-      other acceptable reasons must contact the administration for the Multimedia Design and Communication programme immediately. The administration will inform the student about the necessary procedures, including the need to obtain a medical certificate.
-      Students must pay for any medical certificates themselves.</p>
+      <h3>Attendance<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>There are no rules on mandatory attendance, but active enrolment rules and criteria apply.<br> Students must actively participate in study activities, compulsory projects and assignments, tests and exams in accordance with the conditions described
+        in this curriculum and in applicable acts and ministerial orders. KEA regularly evaluates student activity. <br> To be considered active, students must participate in <br> • project start-up meetings;<br> • compulsory meetings with their supervisor/lecturer;<br>        • project work, including submission of assignments on the learning platform for the Multimedia Design and Communication programme;<br> • project presentations and evaluations;<br> • tests and exams as described in this curriculum;<br> • a number
+        of compulsory assignments each semester. These assignments must be approved for students to be able to register for exams in the semester in question.<br> Students who are unable to participate in study activities due to documented illness or
+        for other acceptable reasons must contact the administration for the Multimedia Design and Communication programme immediately. The administration will inform the student about the necessary procedures, including the need to obtain a medical certificate.
+        Students must pay for any medical certificates themselves.</p>
     </section>
     <section>
-        <h3>Cheating<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>Students who cheat at an exam will be expelled from the exam. <br> In case of aggravating circumstances, students may be suspended from KEA for a long or short period of time. <br> In such event, students must be issued with a written warning
-      stating that repeated cheating may result in permanent expulsion. <br> Cheating includes: <br> – obtaining unlawful help during an exam;<br> – providing unlawful help to other students during an exam;<br> – presenting other people’s work as one’s
-      own; <br> – using materials and aids not permitted for the exam in question.<br> Expulsion from an exam due to cheating means that the awarded grade will be withdrawn, and the student will have used one exam attempt. <br> Students who exhibit disruptive
-      behaviour during an exam may be ordered to leave the exam. In less serious cases, KEA will first warn the students.</p>
+      <h3>Cheating<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>Students who cheat at an exam will be expelled from the exam. <br> In case of aggravating circumstances, students may be suspended from KEA for a long or short period of time. <br> In such event, students must be issued with a written warning stating
+        that repeated cheating may result in permanent expulsion. <br> Cheating includes: <br> – obtaining unlawful help during an exam;<br> – providing unlawful help to other students during an exam;<br> – presenting other people’s work as one’s own;
+        <br> – using materials and aids not permitted for the exam in question.<br> Expulsion from an exam due to cheating means that the awarded grade will be withdrawn, and the student will have used one exam attempt. <br> Students who exhibit disruptive
+        behaviour during an exam may be ordered to leave the exam. In less serious cases, KEA will first warn the students.</p>
     </section>
     <section>
-        <h3>Plagiarism<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>Projects and other material in connection with exams must be prepared by the students independently. Students who unlawfully present other people’s work as being their own (plagiarism) or who use their own previously assessed work without stating
-      the source will be expelled from the exam. <br> For
-      information about plagiarism, see www.stopplagiat.nu.<br></p>
+      <h3>Plagiarism<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>Projects and other material in connection with exams must be prepared by the students independently. Students who unlawfully present other people’s work as being their own (plagiarism) or who use their own previously assessed work without stating
+        the source will be expelled from the exam. <br> For information about plagiarism, see www.stopplagiat.nu.<br></p>
     </section>
     <section>
-        <h3>Teaching methods<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>The teaching is a combination of classroom instruction, lectures, workshops, study groups, exercises, major project work and not least guidance. The teaching is planned
-      on the basis of relevant business practice and applied theory.<br> On the programme, teaching methods are used which are aimed at developing the students’ independence as well as their collaborative and innovative skills. <br> Practice-oriented learning<br> The teaching is interdisciplinary and practice-oriented. It primarily takes place in an open
-      environment rather than the traditional classroom setting. The learning environment is designed to be flexible, so as to allow lecturers and students to meet in both formal and informal settings to handle interdisciplinary problems in connection
-      with projects and tasks undertaken for public and private organisations.</p>
+      <h3>Teaching methods<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>The teaching is a combination of classroom instruction, lectures, workshops, study groups, exercises, major project work and not least guidance. The teaching is planned on the basis of relevant business practice and applied theory.<br> On the programme,
+        teaching methods are used which are aimed at developing the students’ independence as well as their collaborative and innovative skills. <br> Practice-oriented learning<br> The teaching is interdisciplinary and practice-oriented. It primarily
+        takes place in an open environment rather than the traditional classroom setting. The learning environment is designed to be flexible, so as to allow lecturers and students to meet in both formal and informal settings to handle interdisciplinary
+        problems in connection with projects and tasks undertaken for public and private organisations.</p>
     </section>
     <section>
-        <h3>compulsory and elective<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>The core areas, courses and learning objectives are divided between three compulsory semesters to ensure the same academic/professional Curriculum for the Academy Profession Degree Programme in Multimedia Design and Communication
-      Copenhagen School of Design and Technology 24 progression and level of complexity for all students. <br> The specialisation takes place in connection with the elective subjects in the third semester. </p>
+      <h3>compulsory and elective<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>The core areas, courses and learning objectives are divided between three compulsory semesters to ensure the same academic/professional Curriculum for the Academy Profession Degree Programme in Multimedia Design and Communication Copenhagen School
+        of Design and Technology 24 progression and level of complexity for all students. <br> The specialisation takes place in connection with the elective subjects in the third semester. </p>
     </section>
     <section>
-        <h3>internship<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>The internship in the fourth semester ensures
-      that students acquire practical knowledge about the profession and learn how to handle practical issues. The final project in the fourth semester adds new perspectives to the student’s specialisation and internship through the application of academic
-      theory and method to a practical issue.</p>
+      <h3>internship<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>The internship in the fourth semester ensures that students acquire practical knowledge about the profession and learn how to handle practical issues. The final project in the fourth semester adds new perspectives to the student’s specialisation
+        and internship through the application of academic theory and method to a practical issue.</p>
     </section>
     <section>
-        <h3>Project work<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>KEA places great emphasis on project work, on contact with the business community and on use of the latest technologies. The project-based working method provides students with important
-      teamwork experience, and through working in a problem-oriented study environment, students acquire experience with the formulation of problem statements and problem solving. </p>
+      <h3>Project work<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>KEA places great emphasis on project work, on contact with the business community and on use of the latest technologies. The project-based working method provides students with important teamwork experience, and through working in a problem-oriented
+        study environment, students acquire experience with the formulation of problem statements and problem solving. </p>
     </section>
     <section>
-        <h3>Credit transfer<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>Successfully completed
-      programme elements are equivalent to the corresponding programme elements at other educational institutions offering the programme. <br> Students are obliged to provide information on completed programme elements from other Danish or foreign higher
-      education programmes and on any employment for which credit transfer may be granted. On a case-by-case basis, KEA approves credit transfers based on completed programme elements and employment comparable to subjects, programme elements and internships.
-      The decision is based on an academic evaluation.</p>
+      <h3>Credit transfer<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>Successfully completed programme elements are equivalent to the corresponding programme elements at other educational institutions offering the programme. <br> Students are obliged to provide information on completed programme elements from other
+        Danish or foreign higher education programmes and on any employment for which credit transfer may be granted. On a case-by-case basis, KEA approves credit transfers based on completed programme elements and employment comparable to subjects, programme
+        elements and internships. The decision is based on an academic evaluation.</p>
     </section>
     <section>
-        <h3>Studying abroad<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>KEA helps students find programmes at foreign educational institutions with learning objectives equivalent to the Multimedia Design and Communication programme.<br> Having
-      passed the first-year exam, students can choose to complete either the entire programme or parts of it abroad. KEA offers multiple possibilities for international study, including the fourth semester internship. Information on partner institutions,
-      international internships, credit transfers and procedures are published regularly by KEA.</p>
+      <h3>Studying abroad<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>KEA helps students find programmes at foreign educational institutions with learning objectives equivalent to the Multimedia Design and Communication programme.<br> Having passed the first-year exam, students can choose to complete either the entire
+        programme or parts of it abroad. KEA offers multiple possibilities for international study, including the fourth semester internship. Information on partner institutions, international internships, credit transfers and procedures are published
+        regularly by KEA.</p>
     </section>
     <section>
-        <h3>others<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>In so far as is relevant, the programme covers issues like entrepreneurship, environmental issues and the dynamics of intercultural encounters.<br>Academic/professional progression<br> The programme is structured around four core areas, which are further divided into a number of sub-topics, each with their own learning objectives.<br>Process and method are essential parts of the learning environment at all times and also form part of the basis for assessment in connection with tests and exams.<br> Motivation
-      <br> An important requirement for completing the programme is active participation in classes, project work and guidance sessions. Students are expected to share in the responsibility for their own learning, which requires motivation and commitment,
-      independence, plenty of initiative and critical thinking. This is a condition for students being able to actively participate in the organisation of their own work – not least in connection with projects.<br> </p>
+      <h3>others<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>In so far as is relevant, the programme covers issues like entrepreneurship, environmental issues and the dynamics of intercultural encounters.<br>Academic/professional progression<br> The programme is structured around four core areas, which are
+        further divided into a number of sub-topics, each with their own learning objectives.<br>Process and method are essential parts of the learning environment at all times and also form part of the basis for assessment in connection with tests and
+        exams.
+        <br> Motivation
+        <br> An important requirement for completing the programme is active participation in classes, project work and guidance sessions. Students are expected to share in the responsibility for their own learning, which requires motivation and commitment,
+        independence, plenty of initiative and critical thinking. This is a condition for students being able to actively participate in the organisation of their own work – not least in connection with projects.<br> </p>
     </section>
     <section>
-        <h3>READ THE FULL CURRICULUM<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
-        <p>Full text of Curriculum for the Academy Profession Degree Programme in Multimedia Design and Communication can be found here: http://www.kea.dk/fileadmin/user_upload/Uddannelser/Studieordninger/update_15/Curriculum_Multimedia_Design_and_Communication_August_2017.pdf</p>
+      <h3>READ THE FULL CURRICULUM<sub>&nbsp; &Hacek; &nbsp;</sub></h3>
+      <p>Full text of Curriculum for the Academy Profession Degree Programme in Multimedia Design and Communication can be found here: http://www.kea.dk/fileadmin/user_upload/Uddannelser/Studieordninger/update_15/Curriculum_Multimedia_Design_and_Communication_August_2017.pdf</p>
     </section>
   </div>
 
