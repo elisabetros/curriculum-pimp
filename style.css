@@ -225,6 +225,10 @@ p, span {
 #additional h3 {
     color: white;
 }
+#additional p {
+    color: white;
+    opacity: .8;
+}
 section {
     padding: 2em;
     height: 1em;
@@ -241,7 +245,20 @@ section.core-area {
     height: auto;
 }
 
-
+footer {
+    padding: 30px;
+    position: relative;
+    top: 70px;
+    font-family: "title", "arial", "sans-serif";
+    display: grid;
+}
+footer section {
+    height: auto;
+}
+footer img {
+    width: 30px;
+    cursor: pointer;
+}
 @media screen and (min-width: 700px) {
     .wrapper {
         margin: 0 10%;
