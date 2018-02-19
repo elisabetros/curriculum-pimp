@@ -101,3 +101,29 @@ function generateForEachSemester(semesters){
         document.querySelector('.semester:nth-of-type('+ (i+1) + ') .blocks').style.width = allEctsS[i]/longestBar*100 +"%";
     }
 }
+
+// fix navi to top after scroll
+const nav = document.querySelector('nav');
+const main = document.querySelector('main');
+const coreAreas = document.querySelector('#coreAreas'); // cuz nav will be fixed later, don't rely the trigger on nav itself, rather the one below nav, so grab this element
+const semesterPlan = document.querySelector('#programStructure');
+const exams = document.querySelector('#exams');
+const additional = document.querySelector('#additional');
+window.addEventListener('scroll', getAndCheckNavOffsetTop);
+function getAndCheckNavOffsetTop(){
+    let offset = coreAreas.getBoundingClientRect();
+    if(offset.top <= 115){
+        nav.style.position = "fixed";
+        nav.style.top = "-45px"; // don't know why -45...
+        nav.style.width = "100vw";
+        coreAreas.style.top = "70px";
+        semesterPlan.style.top = "70px"; // all the following div need to change accordingly as well. Strange.... don't need to change back when scroll back up
+        exams.style.top = "70px";
+        additional.style.top = "70px";
+    } else {
+        nav.style.position = "inherit";
+        nav.style.top = "0px";
+        coreAreas.style.top = "0";
+    }
+}
+

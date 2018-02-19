@@ -89,21 +89,25 @@ a:hover {
 }
 
 nav {
+    height: 70px;
     margin-top: 45px;
   text-align: center;
-    padding: 10px;
+    padding: 30px;
+    background-color: white;
+    z-index: 11;
 }
 
 #coreAreas {
   background-color: rgb(76, 55, 75);
     padding: 30px;
-  display: relative;
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
 }
-
+body>div {
+    position: relative;
+}
 p,
 h1 {
   padding: 1%;
