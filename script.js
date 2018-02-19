@@ -67,7 +67,6 @@ function generateForEachSemester(semesters){
         });
         // expand details for each semester
         let expand = document.querySelectorAll(".expand");
-        console.log(expand);
         expand.forEach(showDetail)
         function showDetail(e, index){
             // click on each expand, opens the corresponding detail section
