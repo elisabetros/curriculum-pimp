@@ -10,22 +10,9 @@ issues:
 !
 
 */
-
-let expand = document.querySelectorAll(".expand");
 let close = document.querySelectorAll(".x");
 let arrow = document.querySelectorAll('sub'); // need to change later
 
-// expand details for each semester
-expand.forEach(showDetail)
-function showDetail(e, index){
-    // click on each expand, opens the corresponding detail section
-    e.addEventListener("click", displayIndivdual);
-    function displayIndivdual(){
-        e.parentElement.nextElementSibling.classList.remove("hide");
-    }
-    // flash expand icons in an order
-    e.style.animation = "flash 2s " + (index * 1) + "s infinite";
-}
 // close details for each semester /* need change later */
 close.forEach(hideDetails);
 function hideDetails(x){
@@ -66,12 +53,26 @@ function generateForEachSemester(semesters){
             let info = document.createElement('p');
             info.textContent = "ECTS: " + block.ects;
             let plus = document.createElement('p'); // need change later
-            plus.textContent = "+"
+            plus.classList.add('expand');
+            plus.textContent = "+";
             generatedBlock.appendChild(h4);
             generatedBlock.appendChild(info);
             generatedBlock.appendChild(plus); // need change later
             thisSemester.appendChild(generatedBlock);
         });
+        // expand details for each semester
+        let expand = document.querySelectorAll(".expand");
+        expand.forEach(showDetail)
+        function showDetail(e, index){
+            // click on each expand, opens the corresponding detail section
+            e.addEventListener("click", displayIndivdual);
+            function displayIndivdual(){
+//                e.parentElement.nextElementSibling.classList.remove("hide");  /* need change */
+            }
+            // flash expand icons in order
+            e.style.animation = "flash 2s " + (index * 1) + "s 1";
+        }
+        // set block width, need to run this after allEcts for whole semester(more than one blocks) is calculated
         for(i=0; i<ectsS.length; i++){
             thisSemester.style.gridTemplateColumns = "repeat(" + allEcts + ", 1fr)";
             document.querySelectorAll('.block')[i].style.gridColumn = "span " + ectsS[i];

@@ -2,6 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --primary-color: rgb(234, 80, 69);
+    --gutter: .75mm;
+}
+@font-face {
+    font-family: "title";
+    src: url("helvetica-neue-lt-std-bdcn.otf");
+}
+@font-face {
+    font-family: "text";
+    src: url("helvetica-neue-lt-std-roman.otf");
 }
 body {
     position: relative;
@@ -28,10 +38,12 @@ a:hover {
 
 nav {
   text-align: center;
+    padding: 30px;
 }
 
 #coreAreas {
-  background-color: rebeccapurple;
+  background-color: rgb(76, 55, 75);
+    padding: 30px;
   display: relative;
   text-align: center;
   display: grid;
@@ -44,12 +56,24 @@ h1 {
   padding: 1%;
   text-align: center;
   grid-column: 1/-1;
+    font-family: "title", "arial", "sans-serif";
+    font-size: 30pt;
+    margin-top: 1em;
 }
-
+h2, h3, li {
+    font-family: "title", "arial", "sans-serif";
+    font-size: 14pt;
+    margin-bottom: 13pt;
+}
 p {
   margin-top: 0;
+    font-family: "text", "arial", "sans-serif";
+    font-size: 11pt;
+    text-align: left;
 }
-
+#coreAreas h1 {
+    color: var(--primary-color);
+}
 .coreimg {
   border: 1px solid black;
   width: 100px;
@@ -61,19 +85,22 @@ p {
   position: relative;
   margin: 3%;
 }
-
 .semester {
-  border: 1px solid black;
+    margin-bottom: var(--gutter);
+}
+.semester>div:not(.details) {
+    display: grid;
+    grid-template-columns: 5em 1fr;
 }
 .blocks {
-    padding: 15px;
+    padding: 0;
     height: auto;
     display: grid;
-    grid-gap: 15px;
+    grid-gap: var(--gutter);
 }
 .block {
-    background-color: darkorange;
-    height: 90px;
+    background-color: rgb(255, 180, 170);
+    height: 130px;
 }
 .hide {
   display: none;
@@ -139,7 +166,7 @@ section.core-area {
 
 @media screen and (min-width: 700px) {
     .wrapper {
-        margin: 10%;
+        margin: 0 10%;
     }
     #coreAreas {
     grid-template-columns: 1fr 1fr 1fr 1fr;
