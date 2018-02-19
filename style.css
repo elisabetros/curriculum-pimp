@@ -281,6 +281,9 @@ section.core-area {
 .unfoldMe {
   cursor: pointer;
   padding: 5px;
+}
+
+h3.unfoldMe {
   text-transform: uppercase;
 }
 
