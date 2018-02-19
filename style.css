@@ -209,6 +209,14 @@ p, span {
     grid-template-columns: 4fr 6fr;
     grid-column-gap: var(--gutter);
 }
+#exams h2 {
+    font-size: 1.7em;
+}
+#exams h3 {
+    font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: .2em;
+}
 .exam {
     height: auto;
     background-color: #e6ba19;
