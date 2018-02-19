@@ -10,17 +10,8 @@ issues:
 !
 
 */
-let close = document.querySelectorAll(".x");
 let arrow = document.querySelectorAll('sub'); // need to change later
 
-// close details for each semester /* need change later */
-close.forEach(hideDetails);
-function hideDetails(x){
-    x.addEventListener("click", hideIndividual);
-    function hideIndividual(){
-        x.parentElement.classList.add("hide");
-    }
-}
 // unfold and fold the detail info in additional-info (and exams)
 arrow.forEach(clickArrow);
 function clickArrow(a){
@@ -48,34 +39,60 @@ function generateForEachSemester(semesters){
             let generatedBlock = document.createElement('div');
             generatedBlock.style.textAlign = "center";
             generatedBlock.classList.add('block');
-            let h4 = document.createElement('h3');
-            h4.textContent = block.name;
-            let info = document.createElement('p');
-            info.textContent = "ECTS: " + block.ects;
+            let h3 = document.createElement('h3');
+            h3.textContent = block.name;
+            h3.style.display = "inline-block";
+            h3.style.color = "white";
+            let credit = document.createElement('span');
+            credit.textContent = "ECTS: " + block.ects;
+            credit.style.marginLeft = "30px";
+            let content = document.createElement('p');
+            content.textContent = block.content;
             let plus = document.createElement('p'); // need change later
+            plus.style.textAlign = "right";
+            plus.style.marginRight = "30px";
             plus.classList.add('expand');
-            plus.textContent = "+";
-            generatedBlock.appendChild(h4);
-            generatedBlock.appendChild(info);
-            generatedBlock.appendChild(plus); // need change later
+            plus.innerHTML = "&caron;";
+            plus.style.fontSize = "37px";
+            let details = document.createElement('div');
+            details.className = "hide details"; // need change later
+            details.style.backgroundColor = "white";
+            details.innerHTML = block.details;
+            generatedBlock.appendChild(h3);
+            generatedBlock.appendChild(credit);
+            generatedBlock.appendChild(content);
+            generatedBlock.appendChild(plus);
+            generatedBlock.appendChild(details);
             thisSemester.appendChild(generatedBlock);
         });
         // expand details for each semester
         let expand = document.querySelectorAll(".expand");
+        console.log(expand);
         expand.forEach(showDetail)
         function showDetail(e, index){
             // click on each expand, opens the corresponding detail section
             e.addEventListener("click", displayIndivdual);
             function displayIndivdual(){
-//                e.parentElement.nextElementSibling.classList.remove("hide");  /* need change */
+                e.nextElementSibling.classList.remove("hide");
             }
             // flash expand icons in order
             e.style.animation = "flash 2s " + (index * 1) + "s 1";
         }
+        // close details for each semester /* need change later */
+        let close = document.querySelectorAll(".x");
+        close.forEach(hideDetails);
+        function hideDetails(x){
+            x.addEventListener("click", hideIndividual);
+            function hideIndividual(){
+                x.parentElement.classList.add("hide");
+            }
+        }
+
         // set block width, need to run this after allEcts for whole semester(more than one blocks) is calculated
         for(i=0; i<ectsS.length; i++){
             thisSemester.style.gridTemplateColumns = "repeat(" + allEcts + ", 1fr)";
             document.querySelectorAll('.block')[i].style.gridColumn = "span " + ectsS[i];
+            document.querySelectorAll('.details')[i].style.gridColumn = "span " + ectsS[i];
         }
         allEctsS.push(allEcts);
     }

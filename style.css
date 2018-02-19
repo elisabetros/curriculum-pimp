@@ -19,8 +19,29 @@ body {
 #frontpage {
   height: 100vh;
   background-color: azure;
+    position: relative;
 }
-
+#frontpage img:first-child {
+    width: 70%;
+    margin: 0 10% 0 20%;
+}
+img.logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#frontpage h1, #frontpage h2 {
+    text-align: left;
+    position: absolute;
+    left: 5%;
+    bottom: 130px;
+    font-size: 50pt;
+}
+#frontpage h2 {
+    bottom: 70px;
+    font-size: 30pt;
+    margin-left: 40px
+}
 li {
   list-style-type: none;
   display: inline-block;
@@ -60,19 +81,24 @@ h1 {
     font-size: 30pt;
     margin-top: 1em;
 }
+h1:not(#first) {
+    color: var(--primary-color);
+}
 h2, h3, li {
     font-family: "title", "arial", "sans-serif";
     font-size: 14pt;
     margin-bottom: 13pt;
 }
-p {
+#first~h2 {
+    text-align: center;
+}
+p, span {
   margin-top: 0;
     font-family: "text", "arial", "sans-serif";
     font-size: 11pt;
     text-align: left;
 }
 #coreAreas h1 {
-    color: var(--primary-color);
 }
 .coreimg {
   border: 1px solid black;
@@ -90,7 +116,7 @@ p {
 }
 .semester>div:not(.details) {
     display: grid;
-    grid-template-columns: 5em 1fr;
+    grid-template-columns: 9em 1fr;
 }
 .blocks {
     padding: 0;
@@ -100,20 +126,17 @@ p {
 }
 .block {
     background-color: rgb(255, 180, 170);
-    height: 130px;
+    height: auto;
+    padding: 20px;
 }
 .hide {
   display: none;
 }
 
 .details {
-    position: absolute;
-    height: 100%;
-    width: 75%;
-    right: 0;
-    top: 0;
-    background-color: aqua;
-    overflow: scroll;
+    width: calc(100% + 30px);
+    position: relative;
+    left: -15px;
 }
 
 .expand {
@@ -134,8 +157,9 @@ p {
 
 .x {
     cursor: pointer;
-    font-size: 2em;
     text-align: right;
+    font-weight: bold;
+    margin-right: 43px;
 }
 
 #exams {
