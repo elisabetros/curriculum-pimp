@@ -134,11 +134,15 @@ p, span {
   display: grid;
   grid-template-columns: 1fr 1fr;
     grid-column-gap: 50px;
+    align-items: center;
 }
 #coreAreas img{
     cursor: pointer;
+    justify-self: flex-end;
 }
 .core-description p {
+    width: 80%;
+    margin-left: 10%;
     color: rgba(255,255,255, .7);
     font-weight: bold;
     font-size: 17px;
