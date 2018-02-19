@@ -14,6 +14,7 @@ issues:
 let expand = document.querySelectorAll(".expand");
 let close = document.querySelectorAll(".x");
 let arrow = document.querySelectorAll('sub'); // need to change later
+let unfoldMe = document.querySelectorAll('.unfoldMe');
 
 // expand details for each semester
 expand.forEach(showDetail)
@@ -40,12 +41,21 @@ function hideDetails(x) {
 }
 // unfold and fold the detail info in additional-info (and exams)
 arrow.forEach(clickArrow);
+unfoldMe.forEach(clickArrowunfoldMe);
 
 function clickArrow(a) {
   a.addEventListener('click', unfold);
 
   function unfold() {
     a.parentElement.parentElement.classList.toggle('unfold');
+  }
+}
+
+function clickArrowunfoldMe(a) {
+  a.addEventListener('click', unfoldMeNow);
+
+  function unfoldMeNow() {
+    a.parentElement.classList.toggle('unfold');
   }
 }
 
@@ -74,7 +84,7 @@ function generateForEachSemester(semesters) {
       let info = document.createElement('p');
       info.textContent = "ECTS: " + block.ects;
       let plus = document.createElement('p'); // need change later
-      plus.textContent = "+"
+      plus.textContent = "";
       generatedBlock.appendChild(h4);
       generatedBlock.appendChild(info);
       generatedBlock.appendChild(plus); // need change later

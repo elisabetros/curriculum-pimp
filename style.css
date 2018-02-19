@@ -4,33 +4,58 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'helvetica_neue';
+  src: url(fonts/helvetica_neue.otf);
+}
+
+@font-face {
+  font-family: 'helvetica_roman';
+  src: url(fonts/helvetica_roman.otf);
+}
+
 body {
   position: relative;
+  background-color: rgb(175, 202, 200);
 }
 
 #frontpage {
   height: 100vh;
-  background-color: azure;
+  background-color: rgb(175, 202, 200);
 }
-svg{
-    width: 50%;
-     margin:auto;
-    display: block;
+
+.topMenu {
+  background-color: rgb(76, 55, 75);
+  font-size: 20px;
+  font-family: helvetica_roman;
 }
-path{
-    fill:none;
-    stroke: black;
-    stroke-width: 1;
-    stroke-dasharray:1;
-    stroke-dashoffset: 1;
+
+.topMenu li a {
+  color: white;
 }
-.draw{
-    animation: dash 100s linear forwards;
+
+svg {
+  width: 90%;
+  margin: auto;
+  display: block;
 }
-@keyframes dash{
-    to{
-        stroke-dashoffset:0;
-    }
+
+path {
+  fill: none;
+  stroke: rgb(76, 55, 75);
+  stroke-width: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.draw {
+  animation: dash 100s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 li {
@@ -40,7 +65,7 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(76, 55, 75);
   margin: 1em;
 }
 
@@ -53,7 +78,7 @@ nav {
 }
 
 #coreAreas {
-  background-color: rebeccapurple;
+  background-color: rgb(255, 180, 170);
   display: relative;
   text-align: center;
   display: grid;
@@ -61,11 +86,25 @@ nav {
   justify-items: center;
 }
 
-p,
+p {
+  text-align: center;
+  grid-column: 1/-1;
+  color: rgb(76, 55, 75);
+  font-family: 'helvetica_roman';
+  padding: 1%;
+}
+
+.core-area p {
+  color: white;
+}
+
 h1 {
   padding: 1%;
   text-align: center;
   grid-column: 1/-1;
+  color: rgb(76, 55, 75);
+  font-family: 'helvetica_neue';
+  font-size: 30px;
 }
 
 p {
@@ -79,6 +118,12 @@ p {
   margin: 5%
 }
 
+.coreimg img {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+
 .wrapper {
   position: relative;
   margin: 3%;
@@ -86,6 +131,7 @@ p {
 
 .semester {
   border: 1px solid black;
+  background-color: rgb(255, 180, 170);
 }
 
 .blocks {
@@ -95,8 +141,60 @@ p {
   grid-gap: 15px;
 }
 
+h2 {
+  font-family: 'helvetica_neue';
+  color: rgb(76, 55, 75);
+}
+
+/* i {
+  border: solid rgb(76, 55, 75);
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 2em;
+} */
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  position: absolute;
+  top: 19%;
+  left: 50%;
+  margin-left: -50px;
+  border: solid rgb(76, 55, 75);
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 2em;
+}
+
+footer {
+  height: 15vh;
+  background-color: rgb(76, 55, 75);
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  font-family: helvetica_roman;
+}
+
+footer p {
+  font-size: 15px;
+  color: white;
+  font-family: helvetica_roman;
+}
+
+h3 {
+  color: rgb(76, 55, 75);
+}
+
+.semester h3 {
+  color: white;
+}
+
+#programStructure {
+  background-color: rgb(175, 202, 200);
+}
+
 .block {
-  background-color: darkorange;
+  /* background-color: rgb(255, 180, 170); */
   height: 90px;
 }
 
@@ -110,7 +208,7 @@ p {
   width: 75%;
   right: 0;
   top: 0;
-  background-color: aqua;
+  background-color: rgb(199, 87, 72);
   overflow: scroll;
 }
 
@@ -140,8 +238,13 @@ p {
   background-color: bisque;
 }
 
+h3 {
+  font-family: 'helvetica_neue';
+  color: rgb(76, 55, 75);
+}
+
 #additional {
-  background-color: brown;
+  background-color: rgb(255, 180, 170);
   display: grid;
   grid-template-columns: 1fr;
   padding: 3%;
@@ -159,15 +262,44 @@ section.unfold {
 
 sub {
   cursor: pointer;
+  float: right;
 }
 
 section.core-area {
   height: auto;
 }
 
+.semester-menu {
+  padding: 2em;
+  background-color: rgb(255, 228, 196);
+}
+
+.pictures img {
+  width: 200px;
+}
+
+.unfoldMe {
+  cursor: pointer;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+.unfoldMe-bg1 {
+  background-color: #FFE4C4;
+}
+
+.unfoldMe-bg2 {
+  background-color: #FFB4AA;
+}
+
 @media screen and (min-width: 700px) {
   .wrapper {
     margin: 10%;
+  }
+  .pictures {
+    display: inline;
+    float: left;
+    padding-left: 2em;
   }
   #coreAreas {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -175,8 +307,25 @@ section.core-area {
   #additional {
     grid-template-columns: 1fr 1fr;
   }
-  .topMenu {
-    /* position: fixed; */
-    /* top: 0; */
+  svg {
+    width: 90%;
+  }
+  #exams {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    padding: 3%;
+  }
+  #frontpage {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    justify-self: center;
+    padding-top: 10vh;
+  }
+  .exams-text p {
+    text-align: left;
+  }
+  .semester {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
   }
 }
