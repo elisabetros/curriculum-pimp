@@ -97,14 +97,6 @@ nav {
     z-index: 11;
 }
 
-#coreAreas {
-  background-color: rgb(76, 55, 75);
-    padding: 30px;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-}
 body>div {
     position: relative;
 }
@@ -135,15 +127,22 @@ p, span {
     font-size: 11pt;
     text-align: left;
 }
-#coreAreas h1 {
+#coreAreas {
+  background-color: rgb(76, 55, 75);
+    padding: 30px 70px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
 }
-.coreimg {
-  border: 1px solid black;
-  width: 100px;
-  height: 100px;
-  margin: 5%
+#coreAreas img{
+    cursor: pointer;
 }
-
+.core-description p {
+    color: rgba(255,255,255, .7);
+    font-weight: bold;
+    font-size: 17px;
+}
 .wrapper {
   position: relative;
   margin: 3%;
@@ -162,7 +161,8 @@ p, span {
     grid-gap: var(--gutter);
 }
 .block {
-    background-color: rgb(255, 180, 170);
+
+    background-color: #e88779/*rgb(255, 180, 170)*/;
     height: auto;
     padding: 20px;
 }
@@ -200,11 +200,21 @@ p, span {
 }
 
 #exams {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    grid-column-gap: var(--gutter);
 }
 .exam {
     height: auto;
-    background-color: bisque;
+    background-color: #e6ba19;
+    opacity: .7;
     margin-bottom: 10px;
+}
+.exam1 {
+    margin: 30px;
+    outline: 7px solid #e6ba19;
+    background-color: transparent;
 }
 #additional {
     background-color: #333;
@@ -235,9 +245,6 @@ section.core-area {
 @media screen and (min-width: 700px) {
     .wrapper {
         margin: 0 10%;
-    }
-    #coreAreas {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     #additional {
         grid-template-columns: 1fr 1fr;
