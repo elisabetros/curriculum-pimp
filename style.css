@@ -224,6 +224,7 @@ p, span {
     background-color: #333;
     display: grid;
     grid-template-columns: 1fr;
+    grid-gap: var(--gutter);
     padding: 3%;
 }
 #additional h3 {
