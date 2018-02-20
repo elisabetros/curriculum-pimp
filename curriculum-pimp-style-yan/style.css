@@ -25,7 +25,6 @@ fix:
     src: url("helvetica-neue-lt-std-roman.otf");
 }
 body {
-    position: relative;
 }
 #frontpage {
     position: relative;
@@ -124,18 +123,16 @@ nav {
     }
 }
 
-body>div {
-    position: relative;
-}
 
 
-h1 {
+h1{
   padding: 1%;
   text-align: center;
   grid-column: 1/-1;
+    font-size: 2.5em;
     font-family: "title", "arial", "sans-serif";
-    font-size: 30pt;
     margin-top: 1em;
+    margin-bottom: 1em;
 }
 h1:not(#first), section.unfold a {
     color: var(--primary-color);
@@ -143,8 +140,11 @@ h1:not(#first), section.unfold a {
 }
 h2, h3, li {
     font-family: "title", "arial", "sans-serif";
-    font-size: 14pt;
-    margin-bottom: 13pt;
+
+}
+h3{
+     font-size: 1em;
+    margin-bottom: 2em;
 }
 #first~h2 {
     text-align: center;
@@ -152,7 +152,6 @@ h2, h3, li {
 p, span {
   margin-top: 0;
     font-family: "text", "arial", "sans-serif";
-    font-size: 11pt;
     text-align: left;
 }
 #coreAreas {
@@ -160,7 +159,6 @@ p, span {
     height:100vh;
 }
 .collage{
-    margin-top:3em;
     width: 100vw;
     height:50vh;
     background-size: cover;
@@ -168,7 +166,6 @@ p, span {
     background-image: url(img/coreareas_collage.png);
 }
 .opac{
-    margin-top:3em;
     position: absolute;
     width: 100vw;
     height:50vh;
@@ -202,6 +199,9 @@ p, span {
     padding:2em;
     grid-gap:2px;
     align-items: center;
+}
+#programStructure{
+    padding: 3em;
 }
 
 .wrapper {
@@ -242,17 +242,9 @@ p, span {
   font-size: 2em;
   margin: 0;
   cursor: pointer;
-    animation: flash 2s ease infinite;
+
 }
 
-@keyframes flash {
-    30% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
 .x {
     cursor: pointer;
@@ -260,54 +252,101 @@ p, span {
     font-weight: bold;
     margin-right: 43px;
 }
+.arrow{
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+    margin-left: 1em;
+    float: right;
 
-#exams {
-    padding: 50px;
-    display: grid;
-    grid-template-columns: 4fr 6fr;
-    grid-column-gap: var(--gutter);
 }
-#exams h2 {
-    font-size: 1.7em;
-}
-#exams h3 {
-    font-size: 1.1em;
-    margin-top: 1em;
+
+.arrow:after {
+  content: '';
+	display: inline-block;
+  margin-left: 1em;
     margin-bottom: .2em;
+  width: .5em;
+  height: .5em;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+    float: right;
 }
-.exam {
-    height: auto;
-    background-color: #e6ba19;
-    opacity: .7;
-    margin-bottom: 10px;
+.black:after{
+    border-top: 0.1em solid #000;
+  border-right: 0.1em solid #000;
 }
-.exam1 {
-    margin: 30px;
-    outline: 7px solid #e6ba19;
-    background-color: transparent;
+.white:after{
+     border-top: 0.1em solid #fff;
+  border-right: 0.1em solid #fff;
 }
-#additional {
-    background-color: #333;
+#exams{
+    height: 140vh;
+    padding: 2em;
+    position: relative;
+}
+.library{
+    width: 80%;
+    position: absolute;
+    left:0;
+}
+.examgrid{
+    position: absolute;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: var(--gutter);
-    padding: 3%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    width: 50vw;
+    top:70vh;
+    right:4vw;
 }
-#additional h3 {
+.examgrid>section{
+    background-color: #E6BA19;
+    height: 4em;
+    cursor: pointer;
+}
+.examgrid>h3{
+    font-size: 2em;
+}
+
+#other {
+    position: relative;
+    height: 1400vh;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin: 1em;
     color: white;
 }
-#additional p {
-    color: white;
+.otherGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:5px;
+    width: 60vw;
+    position: absolute;
+    top:50vh;
+}
+.otherGrid>section{
+    background-color: #084C61;
+    cursor: pointer;
+}
+.othergrid>span{
+    color:white;
+}
+
+#other p {
     opacity: .8;
 }
+.campus{
+    position: absolute;
+    right:0;
+}
 section {
-    padding: 2em;
-    height: 1em;
+    padding: 1em;
+    height: 3em;
     overflow: hidden;
 }
 section.unfold {
-    height: auto;
-    background-color: #555;
+    height: auto;;
 }
 sub {
     cursor: pointer;
@@ -317,11 +356,11 @@ section.core-area {
 }
 
 footer {
+    height: 30vh;
     padding: 30px;
     position: relative;
     top: 70px;
     font-family: "title", "arial", "sans-serif";
-    display: grid;
 }
 footer section {
     height: auto;
@@ -334,7 +373,7 @@ footer img {
     .wrapper {
         margin: 0 10%;
     }
-    #additional {
+    #other {
         grid-template-columns: 1fr 1fr;
     }
 
