@@ -102,13 +102,15 @@ function generateForEachSemester(semesters){
     }
 }
 
-// fix navi to top after scroll
+// fix navi to top after scroll and show kea log + search
 const nav = document.querySelector('nav');
 const main = document.querySelector('main');
 const coreAreas = document.querySelector('#coreAreas'); // cuz nav will be fixed later, don't rely the trigger on nav itself, rather the one below nav, so grab this element
 const semesterPlan = document.querySelector('#programStructure');
 const exams = document.querySelector('#exams');
 const additional = document.querySelector('#additional');
+const keaLogo = document.querySelector('.kea-logo img');
+const search = document.querySelector('.search');
 window.addEventListener('scroll', getAndCheckNavOffsetTop);
 function getAndCheckNavOffsetTop(){
     let offset = coreAreas.getBoundingClientRect();
@@ -120,10 +122,14 @@ function getAndCheckNavOffsetTop(){
         semesterPlan.style.top = "70px"; // all the following div need to change accordingly as well. Strange.... don't need to change back when scroll back up
         exams.style.top = "70px";
         additional.style.top = "70px";
+        keaLogo.classList.add('show');
+        search.classList.add('show');
     } else {
         nav.style.position = "inherit";
         nav.style.top = "0px";
         coreAreas.style.top = "0";
+        keaLogo.classList.remove('show');
+        search.classList.remove('show');
     }
 }
 

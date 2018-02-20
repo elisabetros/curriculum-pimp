@@ -96,7 +96,31 @@ nav {
     background-color: white;
     z-index: 11;
 }
-
+.kea-logo img {
+    height: 3em;
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    opacity: 0;
+}
+.kea-logo img.show {
+    animation: showLogoSearch 1s ease forwards;
+}
+.search {
+    position: absolute;
+    right: 1em;
+    bottom: 0;
+    font-size: .7em;
+    opacity: 0;
+}
+.search.show {
+    animation: showLogoSearch 1s ease forwards;
+}
+@keyframes showLogoSearch {
+    to {
+        opacity: 1;
+    }
+}
 body>div {
     position: relative;
 }
@@ -175,6 +199,9 @@ p, span {
 }
 
 .details {
+    height: 250px;
+    overflow: scroll;
+    cursor: s-resize;
     width: calc(100% + 30px);
     position: relative;
     left: -15px;
