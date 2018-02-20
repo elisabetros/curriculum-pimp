@@ -1,0 +1,341 @@
+/*
+to do:
++ responsive: especially nav
+
+fix:
+
+
+
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary-color: rgb(234, 80, 69);
+    --gutter: .75mm;
+}
+@font-face {
+    font-family: "title";
+    src: url("helvetica-neue-lt-std-bdcn.otf");
+}
+@font-face {
+    font-family: "text";
+    src: url("helvetica-neue-lt-std-roman.otf");
+}
+body {
+    position: relative;
+}
+#frontpage {
+    position: relative;
+    padding: 3em;
+    height: 100vh;
+}
+svg{
+    width: 50vw;
+   margin-left: 40vw;
+    padding: 1em;
+}
+.svgBox{
+    background-color: rgba(240, 155, 148, .7);
+    width:55vw;
+    height: 80vh;
+    right:5vw;
+    position: absolute;
+    z-index: -2;
+}
+.textBox{
+    background-color: #4C374B;
+    position: absolute;
+    top:40vh;
+    left:5vw;
+    text-align: center;
+    padding: 2em;
+    color: white;
+}
+.textBox>h1, .textBox>h2{
+    padding: .2em;
+    color:white;
+    margin: 0;
+}
+.textBox>h1{
+    font-size: 2.5em;
+}
+.textBox>h2{
+    font-size: 2em;
+}
+.textBox>h3{
+    font-size: 1.8em;
+}
+
+img.logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 1em;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+nav {
+    height: 70px;
+    margin-top: 45px;
+  text-align: center;
+    padding: 30px;
+    background-color: white;
+    z-index: 11;
+}
+.kea-logo img {
+    height: 3em;
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    opacity: 0;
+}
+.kea-logo img.show {
+    animation: showLogoSearch 1s ease forwards;
+}
+.search {
+    position: absolute;
+    right: 1em;
+    bottom: 0;
+    font-size: .7em;
+    opacity: 0;
+}
+.search.show {
+    animation: showLogoSearch 1s ease forwards;
+}
+@keyframes showLogoSearch {
+    to {
+        opacity: 1;
+    }
+}
+
+body>div {
+    position: relative;
+}
+
+
+h1 {
+  padding: 1%;
+  text-align: center;
+  grid-column: 1/-1;
+    font-family: "title", "arial", "sans-serif";
+    font-size: 30pt;
+    margin-top: 1em;
+}
+h1:not(#first), section.unfold a {
+    color: var(--primary-color);
+    margin-left: 7px;
+}
+h2, h3, li {
+    font-family: "title", "arial", "sans-serif";
+    font-size: 14pt;
+    margin-bottom: 13pt;
+}
+#first~h2 {
+    text-align: center;
+}
+p, span {
+  margin-top: 0;
+    font-family: "text", "arial", "sans-serif";
+    font-size: 11pt;
+    text-align: left;
+}
+#coreAreas {
+    position: relative;
+    height:100vh;
+}
+.collage{
+    margin-top:3em;
+    width: 100vw;
+    height:50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(img/coreareas_collage.png);
+}
+.opac{
+    margin-top:3em;
+    position: absolute;
+    width: 100vw;
+    height:50vh;
+    background-color: rgba(250, 250, 250, 0.6);
+}
+.icon{
+    background-color: #F15B4E;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 2;
+    top:35vh;
+}
+.communication{
+    left:7vw;
+}
+.interaction{
+    left:34vw;
+}
+.business{
+    right:34vw;
+}
+.design{
+    right:7vw;
+}
+.inline{
+    margin-top:2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding:2em;
+    grid-gap:2px;
+    align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  margin: 3%;
+}
+.semester {
+    margin-bottom: var(--gutter);
+}
+.semester>div:not(.details) {
+    display: grid;
+    grid-template-columns: 9em 1fr;
+}
+.blocks {
+    padding: 0;
+    height: auto;
+    display: grid;
+    grid-gap: var(--gutter);
+}
+.block {
+
+    background-color: #e88779/*rgb(255, 180, 170)*/;
+    height: auto;
+    padding: 20px 20px 0 20px;
+}
+.hide {
+  display: none;
+}
+
+.details {
+    height: auto;
+    width: calc(100% + 30px);
+    position: relative;
+    left: -15px;
+}
+
+.expand {
+  font-size: 2em;
+  margin: 0;
+  cursor: pointer;
+    animation: flash 2s ease infinite;
+}
+
+@keyframes flash {
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.x {
+    cursor: pointer;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 43px;
+}
+
+#exams {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    grid-column-gap: var(--gutter);
+}
+#exams h2 {
+    font-size: 1.7em;
+}
+#exams h3 {
+    font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: .2em;
+}
+.exam {
+    height: auto;
+    background-color: #e6ba19;
+    opacity: .7;
+    margin-bottom: 10px;
+}
+.exam1 {
+    margin: 30px;
+    outline: 7px solid #e6ba19;
+    background-color: transparent;
+}
+#additional {
+    background-color: #333;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--gutter);
+    padding: 3%;
+}
+#additional h3 {
+    color: white;
+}
+#additional p {
+    color: white;
+    opacity: .8;
+}
+section {
+    padding: 2em;
+    height: 1em;
+    overflow: hidden;
+}
+section.unfold {
+    height: auto;
+    background-color: #555;
+}
+sub {
+    cursor: pointer;
+}
+section.core-area {
+    height: auto;
+}
+
+footer {
+    padding: 30px;
+    position: relative;
+    top: 70px;
+    font-family: "title", "arial", "sans-serif";
+    display: grid;
+}
+footer section {
+    height: auto;
+}
+footer img {
+    width: 30px;
+    cursor: pointer;
+}
+@media screen and (min-width: 700px) {
+    .wrapper {
+        margin: 0 10%;
+    }
+    #additional {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
