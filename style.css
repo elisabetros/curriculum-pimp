@@ -79,8 +79,16 @@ nav {
     background-color: #f15b4e;
   text-align: center;
     padding: .5em;
+    z-index: 10;
 }
-
+.sticky{
+    position: fixed;
+    top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 60px;
+}
 #coreAreas {
   background-color: #f15b4e;
   display: relative;
@@ -116,13 +124,16 @@ div#coreAreas>h1{
 p,
 h1, h2 {
   padding: 1%;
-  text-align: center;
   grid-column: 1/-1;
-
+text-align: center;
 }
 
 h1, h2, h3{
     font-family: "Helvetica Neue";
+    text-align: center;
+}
+h3{
+    padding-bottom: 1em;
 }
 p {
   margin-top: 0;
@@ -200,24 +211,51 @@ p {
     text-align: right;
 }
 
-#exams {
-  background-color:#c1f0e8 ;
+#exams {;
+    padding:3em;
+}
+#exams>h1{
+    background-color: #1A1E4E;
+    box-shadow: 5px 5px #000000;
+    margin-left:30%;
+    margin-right: 30%;
+    margin-bottom: 2em;
+    width: 40%;
+    color:white;
+    text-shadow: 1px 1px #000000;
+    padding: .6em;
 }
 
 #additional {
-    background-color: #66cdc6;
+    background-color: #F4CEDB;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 3%;
+    padding: 7em;
+    padding-top: 2em;
     text-align: center;
 }
+#additional>h1{
+    background-color: #F15B4E;
+    box-shadow: 5px 5px #000000;
+    margin-left:30%;
+    margin-right: 30%;
+    margin-bottom: 2em;
+     margin-top: .5em;
+    width: 40%;
+    color:white;
+    text-shadow: 1px 1px #000000;
+    padding: .6em;
+}
 #additional>section{
-
-    border: 1px solid #33807b;
+    background-color:  #1A1E4E;
+    color:white;
+}
+#exams>div>section{
+    background-color:  #F4CEDB;
 }
 section {
-    padding: 2em;
-    height: 1em;
+    padding: 1em;
+    height: 4em;
     overflow: hidden;
 }
 section.unfold {
@@ -230,6 +268,9 @@ section.core-area {
     height: auto;
 }
 
+#exams>section>p, #additional>section>p{
+    text-align: left;
+}
 
 @media screen and (min-width: 700px) {
     .wrapper {
@@ -243,6 +284,40 @@ section.core-area {
     }
     #additional {
         grid-template-columns: 1fr 1fr;
+        grid-gap: .5em;
+    }
+
+    #exams{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        padding: 4em;
+        grid-gap:5px;
+    }
+    .onImage{
+        position: absolute;
+        background-color:white;
+    }
+    .one{
+        top: 40vh;
+        left:30vw;
+    }
+    .two{
+        top: 45vh;
+        left: 33vw;
+    }
+
+    .library{
+        width: 100%;
+        margin: 1em;
+        margin-left: 0;
+    }
+    #exams>div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4px;
+        margin-top: 7em;
+        padding-bottom: 5em;
     }
 
 }

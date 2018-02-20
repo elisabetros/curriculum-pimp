@@ -23,8 +23,6 @@ function showDetail(e, index){
     function displayIndivdual(){
         e.parentElement.nextElementSibling.classList.remove("hide");
     }
-    // flash expand icons in an order
-    e.style.animation = "flash 2s " + (index * 1) + "s infinite";
 }
 // close details for each semester /* need change later */
 close.forEach(hideDetails);
@@ -84,3 +82,19 @@ function generateForEachSemester(semesters){
         document.querySelector('.semester:nth-of-type('+ (i+1) + ') .blocks').style.width = allEctsS[i]/longestBar*100 +"%";
     }
 }
+
+window.onscroll = function() {myFunction()};
+//window.addEventlistener ("scroll", myFunction());
+let navbar = document.querySelector("nav");
+let sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
